@@ -1,10 +1,14 @@
 pipeline {
     agent any
 
+    tools {
+        maven 'Maven'
+    }
+
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/tanmayzalke26/Jenkins.git'
+                git branch: 'main', url: 'https://github.com/tany109043/jenk.git'
             }
         }
 
